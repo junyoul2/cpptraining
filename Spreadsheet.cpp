@@ -21,7 +21,7 @@ Spreadsheet::Spreadsheet(const Spreadsheet &src)
   }
 }
 
-Spreadsheet::Spreadsheet(Spreadsheet &&src) noexcept : Spreadsheet() {
+Spreadsheet::Spreadsheet(Spreadsheet &&src) noexcept {
   swap(*this, src);
 }
 

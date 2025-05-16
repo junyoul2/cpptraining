@@ -8,17 +8,20 @@ void printDebug(std::string myString) {
          myString.c_str()); // __AUTO_GENERATED_PRINT_VAR_END__
 }
 
+void printDebug2(std::string &rawString) {
+  std::cout << "My Test Refactoring" << std::endl;
+  std::cout << rawString << std::endl;
+}
+
 int main() {
   std::string myString = "Hello, world";
-  std::string rawString = R"(Hello,
-    world)";
+  std::string rawString = R"(Hello, world)";
 
   func(myString);
 
   printDebug(myString);
 
-  std::cout << "My Test Refactoring" << std::endl;
-  std::cout << rawString << std::endl;
+  printDebug2(rawString);
 
   return 0;
 }

@@ -2,14 +2,18 @@
 #include <iostream>
 #include <vector>
 
-int main() {
-  std::vector<Spreadsheet> vec;
-
+void extracted(std::vector<Spreadsheet> &vec) {
   for (int i = 0; i < 2; ++i) {
     std::cout << "Iteration " << i << std::endl;
     vec.push_back(Spreadsheet{100, 100});
     std::cout << std::endl;
   }
+}
+
+int main() {
+  std::vector<Spreadsheet> vec;
+
+  extracted(vec);
 
   Spreadsheet s{2, 3};
   s = createObject();
