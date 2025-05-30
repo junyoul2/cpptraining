@@ -1,19 +1,16 @@
 #include "spreadpg.h"
 #include <iostream>
+#include <string>
 #include <vector>
 
-void extracted(std::vector<Spreadsheet> &vec) {
+int main() {
+  std::vector<Spreadsheet> vec;
+
   for (int i = 0; i < 2; ++i) {
     std::cout << "Iteration " << i << std::endl;
     vec.push_back(Spreadsheet{100, 100});
     std::cout << std::endl;
   }
-}
-
-int main() {
-  std::vector<Spreadsheet> vec;
-
-  extracted(vec);
 
   Spreadsheet s{2, 3};
   s = createObject();
@@ -26,6 +23,9 @@ int main() {
 
   const Spreadsheet sheet2(5, 6);
   const SpreadsheetCell &cell2 = sheet2.getCellAt(2, 2);
+
+  using namespace std::string_literals;
+  auto myString = "Hello World"s;
 
   return 0;
 }
